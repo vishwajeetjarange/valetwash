@@ -320,7 +320,8 @@ export default function App() {
             ? 'max-w-[430px] my-0 sm:my-6 sm:rounded-[44px] shadow-[0px_25px_70px_rgba(10,34,64,0.22)] border-0 sm:border-[8px] sm:border-slate-800 overflow-hidden relative min-h-screen sm:min-h-[900px] flex flex-col' 
             : 'max-w-4xl min-h-screen shadow-lg'
         }`}
-        style={{ backgroundColor: canvasBg }}
+       style={{ backgroundColor: canvasBg }}
+>
      {mobileView && (
     <div 
       className="w-full text-white pt-2 pb-1.5 px-4 flex items-center justify-between select-none z-50 border-b border-white/10 shadow-lg"
