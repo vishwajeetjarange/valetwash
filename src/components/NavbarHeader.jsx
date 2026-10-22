@@ -119,7 +119,7 @@ export default function NavbarHeader({
                     </span>
                   </div>
                   <span className="text-[10px] tracking-tight font-medium text-slate-300 opacity-90 flex items-center gap-1">
-                    {brandConfig?.brandTagline || 'Aviation-Grade Auto Detailing'}
+                    {brandConfig?.brandTagline || 'Aviation-Grade Car Care Delivered To Your Doorstep'}
                   </span>
                 </div>
               </>
