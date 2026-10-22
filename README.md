@@ -20,7 +20,7 @@ VALETWASH is a high-converting, mobile-first Web & React application designed wi
 ## 📱 Screen-by-Screen Architecture
 
 1. **Onboarding & Authentication (`OnboardingModal.jsx`)**
-   - 3-Slide tutorial overlay detailing aviation-grade pH foam, 600-GSM plush microfibers, and Hoora-style live GPS tracking.
+   - 3-Slide tutorial overlay detailing aviation-grade pH foam, 600-GSM plush microfibers, and  live GPS tracking.
    - One-tap OTP phone verification flow (auto-suggested `4820` demo code) + Google & Apple ID instant sign-in.
    - Quick vehicle onboarding sheet with category selection and license plate registration.
 
