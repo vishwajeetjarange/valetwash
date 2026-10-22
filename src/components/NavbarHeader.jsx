@@ -143,15 +143,7 @@ export default function NavbarHeader({
           {/* Top Right Action Tools */}
           <div className="flex items-center gap-1 sm:gap-1.5">
             
-            {/* DEVELOPER / ADMIN SETTINGS BUTTON */}
-            <button
-              onClick={() => { playTapSound(); onOpenDevSettings(); }}
-              className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all shadow-md bg-cyan-400 text-[#0A2240] hover:bg-cyan-300 border border-cyan-200"
-              title="Developer Settings"
-            >
-              <Palette className="w-3.5 h-3.5" />
-              <span className="text-[11px] font-bold">Dev Config</span>
-            </button>
+            
 
             {/* View Mode Simulator Toggle */}
             <button
