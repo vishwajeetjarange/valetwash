@@ -310,7 +310,7 @@ export default function App() {
         style={{ backgroundColor: canvasBg }}
       >
 
-        {/* Dynamic Island Notch (EXECUTIVE DEEP NAVY #0A2240) */}
+       
         {mobileView && (
           <div 
   className="w-full text-white pt-2 pb-1.5 px-4 flex items-center justify-between select-none z-50 border-b border-white/10 shadow-lg"
