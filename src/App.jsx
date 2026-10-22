@@ -320,50 +320,53 @@ export default function App() {
             ? 'max-w-[430px] my-0 sm:my-6 sm:rounded-[44px] shadow-[0px_25px_70px_rgba(10,34,64,0.22)] border-0 sm:border-[8px] sm:border-slate-800 overflow-hidden relative min-h-screen sm:min-h-[900px] flex flex-col' 
             : 'max-w-4xl min-h-screen shadow-lg'
         }`}
-       style={{ backgroundColor: canvasBg }}
->
-     {mobileView && (
-    <div 
-      className="w-full text-white pt-2 pb-1.5 px-4 flex items-center justify-between select-none z-50 border-b border-white/10 shadow-lg"
-      style={{ backgroundColor: brandConfig?.theme?.headerBg || brandConfig?.theme?.headerBackground || "#0A2240" }}
+ style={{ backgroundColor: canvasBg }}
     >
-      {/* Live Real-Time Clock */}
-      <span className="text-[11px] font-semibold tracking-tight text-slate-300">
-        {currentTime || "09:41"}
-      </span>
-
-      {/* DYNAMIC ISLAND LIVE ACTIVITY PILL */}
-      <div 
-        onClick={() => { playTapSound(); setActiveTab('tracking'); }}
-        className="group relative flex items-center gap-2 bg-black hover:bg-slate-900 border border-cyan-500/30 text-white px-3 py-1 rounded-full shadow-md hover:shadow-cyan-500/20 transition-all duration-300 ease-out cursor-pointer hover:scale-105 active:scale-95"
-        title="Click Dynamic Island for Live Telematics"
-      >
-        {/* Live Pulsing Radar Dot */}
-        <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
-        </span>
-
-        {/* Live Telematics Info */}
-        <div className="flex items-center gap-1.5 text-[10px] font-medium">
-          <span className="text-cyan-400 font-bold uppercase tracking-wider text-[9px] bg-cyan-950/80 border border-cyan-800/60 px-1.5 py-0.5 rounded">
-            Aero-Rig #08
+      {mobileView && (
+        <div 
+          className="w-full text-white pt-2 pb-1.5 px-4 flex items-center justify-between select-none z-50 border-b border-white/10 shadow-lg"
+          style={{ backgroundColor: brandConfig?.theme?.headerBg || brandConfig?.theme?.headerBackground || "#0A2240" }}
+        >
+          {/* Live Real-Time Clock */}
+          <span className="text-[11px] font-semibold tracking-tight text-slate-300">
+            {currentTime || "09:41"}
           </span>
-          <span className="text-slate-200 font-semibold">En Route</span>
-          <span className="text-slate-500">•</span>
-          <span className="text-cyan-300 font-mono font-bold">{rigEta || "11m"}</span>
-        </div>
-      </div>
 
-      {/* Network & Battery */}
-      <div className="flex items-center gap-1.5 text-[10px] text-slate-300 font-mono">
-        <span className="font-bold text-[9px]">5G</span>
-        <div className="w-5 h-2.5 border border-slate-300 rounded-sm p-0.5 flex items-center">
-          <div className="h-full w-3/4 bg-white rounded-xs"></div>
+          {/* DYNAMIC ISLAND LIVE ACTIVITY PILL */}
+          <div 
+            onClick={() => { 
+              if (typeof playTapSound === 'function') playTapSound(); 
+              if (typeof setActiveTab === 'function') setActiveTab('tracking'); 
+            }}
+            className="group relative flex items-center gap-2 bg-black hover:bg-slate-900 border border-cyan-500/30 text-white px-3 py-1 rounded-full shadow-md hover:shadow-cyan-500/20 transition-all duration-300 ease-out cursor-pointer hover:scale-105 active:scale-95"
+            title="Click Dynamic Island for Live Telematics"
+          >
+            {/* Live Pulsing Radar Dot */}
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
+            </span>
+
+            {/* Live Telematics Info */}
+            <div className="flex items-center gap-1.5 text-[10px] font-medium">
+              <span className="text-cyan-400 font-bold uppercase tracking-wider text-[9px] bg-cyan-950/80 border border-cyan-800/60 px-1.5 py-0.5 rounded">
+                Aero-Rig #08
+              </span>
+              <span className="text-slate-200 font-semibold">En Route</span>
+              <span className="text-slate-500">•</span>
+              <span className="text-cyan-300 font-mono font-bold">11m</span>
+            </div>
+          </div>
+
+          {/* Network & Battery */}
+          <div className="flex items-center gap-1.5 text-[10px] text-slate-300 font-mono">
+            <span className="font-bold text-[9px]">5G</span>
+            <div className="w-5 h-2.5 border border-slate-300 rounded-sm p-0.5 flex items-center">
+              <div className="h-full w-3/4 bg-white rounded-xs"></div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  )}
+      )}
         
         {/* Global Navigation Header with Dev Config Access */}
         <NavbarHeader
