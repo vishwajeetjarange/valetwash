@@ -66,7 +66,7 @@ export default function App() {
   const handleLogoTap = () => {
     setTapCount((prev) => {
       if (prev + 1 === 3) {
-        setIsDevSettingsOpen((show) => !show);
+        setIsDevSettingsOpen((prev) => !prev);
         return 0;
       }
       return prev + 1;
