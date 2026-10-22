@@ -517,22 +517,20 @@ export default function App() {
           darkMode={darkMode}
         />
 
-        <AddVehicleModal
-          isOpen={isAddVehicleOpen}
-          onClose={() => setIsAddVehicleOpen(false)}
-          categories={VEHICLE_CATEGORIES}
-          onAddVehicle={handleAddVehicle}
-          darkMode={darkMode}
-        />
+      <AddVehicleModal
+    isOpen={isAddVehicleOpen}
+    onClose={() => setIsAddVehicleOpen(false)}
+    categories={VEHICLE_CATEGORIES}
+    onAddVehicle={handleAddVehicle}
+    darkMode={darkMode}
+  />
 
-        <InvoiceModal
-          isOpen={!!selectedInvoice}
-          onClose={() => setSelectedInvoice(null)}
-          invoice={selectedInvoice || {}}
-          darkMode={darkMode}
-        />
-
-      </div>
+  <InvoiceModal
+    isOpen={!!selectedInvoice}
+    onClose={() => setSelectedInvoice(null)}
+    invoice={selectedInvoice || {}}
+    darkMode={darkMode}
+  />
     </div>
   );
 }
