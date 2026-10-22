@@ -356,7 +356,7 @@ export default function App() {
           selectedVehicle={selectedVehicle}
           onOpenOnboarding={() => setIsOnboardingOpen(true)}
           brandConfig={brandConfig}
-          onOpenDevSettings={handleLogoTap}
+          onLogoTap={handleLogoTap}
         />
 
         {/* Main Content Viewport (Crisp Canvas Background #F8FAFC) */}
