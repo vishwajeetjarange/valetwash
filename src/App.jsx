@@ -47,7 +47,7 @@ export default function App() {
   const [mobileView, setMobileView] = useState(true);
   const [soundEnabled, setSoundEnabled] = useState(true);
 // Dev Modal State & Triple-Tap Counter
-  const [showDevModal, setShowDevModal] = useState(false);
+  const [isDevSettingsOpen, setIsDevSettingsOpen] = useState(false);
   const [tapCount, setTapCount] = useState(0);
 
   // Secret Keyboard Shortcut (Cmd+Shift+D or Ctrl+Shift+D)
@@ -55,7 +55,7 @@ export default function App() {
     const handleKeyDown = (e) => {
       if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'd') {
         e.preventDefault();
-        setShowDevModal((prev) => !prev);
+        setIsDevSettingsOpen((prev) => !prev);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -66,7 +66,7 @@ export default function App() {
   const handleLogoTap = () => {
     setTapCount((prev) => {
       if (prev + 1 === 3) {
-        setShowDevModal((show) => !show);
+        setIsDevSettingsOpen((show) => !show);
         return 0;
       }
       return prev + 1;
@@ -356,7 +356,7 @@ export default function App() {
           selectedVehicle={selectedVehicle}
           onOpenOnboarding={() => setIsOnboardingOpen(true)}
           brandConfig={brandConfig}
-          onOpenDevSettings={() => setIsDevSettingsOpen(true)}
+          onOpenDevSettings={handleLogoTap}
         />
 
         {/* Main Content Viewport (Crisp Canvas Background #F8FAFC) */}
