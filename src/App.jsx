@@ -46,7 +46,33 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [mobileView, setMobileView] = useState(true);
   const [soundEnabled, setSoundEnabled] = useState(true);
+// Dev Modal State & Triple-Tap Counter
+  const [showDevModal, setShowDevModal] = useState(false);
+  const [tapCount, setTapCount] = useState(0);
 
+  // Secret Keyboard Shortcut (Cmd+Shift+D or Ctrl+Shift+D)
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'd') {
+        e.preventDefault();
+        setShowDevModal((prev) => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  // Hidden Triple-Tap Handler for Mobile Logo
+  const handleLogoTap = () => {
+    setTapCount((prev) => {
+      if (prev + 1 === 3) {
+        setShowDevModal((show) => !show);
+        return 0;
+      }
+      return prev + 1;
+    });
+    setTimeout(() => setTapCount(0), 1000);
+  };
   // Active Screen / Flow State
   const [activeTab, setActiveTab] = useState('home');
   
