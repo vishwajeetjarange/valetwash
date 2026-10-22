@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Flawless Theme Exact Tokens */
+    --canvas-bg: #F8FAFC;
+    --header-bg: #0A2240;
+    --bottom-nav-bg: #0A2240;
+    --bottom-nav-active: #00E5FF;
+    --card-bg: #FFFFFF;
+    --card-title: #0F172A;
+    --card-body: #475569;
+    --card-border: #E2E8F0;
+    --hero-overlay: linear-gradient(180deg, rgba(10, 34, 64, 0.85) 0%, rgba(10, 34, 64, 0.95) 100%);
+    --hero-metric-number: #FFFFFF;
+    --hero-metric-label: #94A3B8;
+    --primary-btn-bg: #0A2240;
+    --primary-btn-text: #FFFFFF;
+    --badge-bg: #E0F2FE;
+    --badge-text: #0369A1;
+
+    /* Theme variables */
+    --theme-primary: #0A2240;
+    --theme-secondary: #1B6CA8;
+    --theme-accent: #00E5FF;
+    --theme-accent-glow: rgba(0, 229, 255, 0.35);
+    --theme-canvas-bg: #F8FAFC;
+    --theme-card-bg: #FFFFFF;
+  }
+}
+
+/* Flawless Theme utility classes */
+.flawless-canvas {
+  background-color: var(--canvas-bg) !important;
+}
+
+.flawless-card {
+  background-color: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+  color: var(--card-body) !important;
+}
+
+.flawless-card-title {
+  color: var(--card-title) !important;
+}
+
+.flawless-card-body {
+  color: var(--card-body) !important;
+}
+
+.flawless-badge {
+  background-color: var(--badge-bg) !important;
+  color: var(--badge-text) !important;
+}
+
+.flawless-primary-btn {
+  background-color: var(--primary-btn-bg) !important;
+  color: var(--primary-btn-text) !important;
+}
+
+.flawless-header {
+  background-color: var(--header-bg) !important;
+}
+
+.flawless-bottom-nav {
+  background-color: var(--bottom-nav-bg) !important;
+}
+
+/* Radar pulse animation */
+@keyframes radar-wave {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+.animate-radar-wave {
+  animation: radar-wave 2.8s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+/* Water bead shimmer */
+@keyframes water-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.15), transparent);
+  transform: translateX(-100%);
+  animation: water-shimmer 2.5s infinite;
+}
