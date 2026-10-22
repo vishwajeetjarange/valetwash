@@ -34,7 +34,7 @@ export default function NavbarHeader({
   selectedVehicle,
   onOpenOnboarding,
   brandConfig,
-  onOpenDevSettings
+  onLogoTap,
 }) {
   const theme = {
     ...DEFAULT_THEME,
@@ -58,8 +58,7 @@ export default function NavbarHeader({
         <div className="flex items-center justify-between gap-2">
           
           {/* BRAND IDENTITY / LOGO AREA */}
-          <div 
-            onClick={() => { playTapSound(); onSelectTab('home'); }}
+          <div onClick={() => { playTapSound(); onSelectTab('home'); if (onLogoTap) onLogoTap(); }}
             className="flex items-center gap-2.5 cursor-pointer group select-none shrink-0"
           >
             {/* MODE 1: IMAGE LOGO REPLACES BRAND NAME COMPLETELY */}
