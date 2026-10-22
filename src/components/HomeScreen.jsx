@@ -52,16 +52,16 @@ export default function HomeScreen({
   };
 
   const company = brandConfig?.companyInfo || {
-    companyName: 'VALETWASH Aero Detailing Technologies Pvt. Ltd.',
+    companyName: 'VALETWASH Pvt. Ltd.',
     aboutBio: 'Pioneering aviation-grade automotive surface preservation delivered autonomously straight to your driveway.',
-    officeAddress: 'Hangar 4, Aviation Business Bay, Santacruz West, Mumbai, Maharashtra 400054',
-    phoneNumbers: '+91 98200 98200, +91 22 4980 1100',
+    officeAddress: 'Valetwash Plot No 8, Raghunandan Nagar Baramati Maharashtra 413102',
+    phoneNumbers: '+91 92267 87303',
     emails: 'concierge@valetwash.aero, support@valetwash.aero',
     operatingHours: 'Monday – Sunday: 06:30 AM – 09:30 PM (All 365 Days)',
     gstNumber: '27AABCU9603R1ZM'
   };
 
-  const phonesList = company.phoneNumbers ? company.phoneNumbers.split(',').map(p => p.trim()) : ['+91 98200 98200'];
+  const phonesList = company.phoneNumbers ? company.phoneNumbers.split(',').map(p => p.trim()) : ['+91 92267 87303'];
   const emailsList = company.emails ? company.emails.split(',').map(e => e.trim()) : ['concierge@valetwash.aero'];
 
   return (
@@ -99,16 +99,16 @@ export default function HomeScreen({
           >
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
             <span className="text-[10px] sm:text-xs font-bold tracking-wider uppercase">
-              Standby in {currentLocation.tag || 'Mumbai'}
+              Standby in {currentLocation.tag || 'Baramati'}
             </span>
           </div>
 
           <h1 className="text-xl sm:text-2xl font-black text-white leading-tight tracking-tight mb-2">
-            Aviation-Grade Detailers on Standby in <span className="text-cyan-400">{currentLocation.tag === 'Home' ? 'Bandra Driveway' : currentLocation.label?.split(',')[0]}</span>
+            Aviation-Grade Detailers on Standby in <span className="text-cyan-400">{currentLocation.tag === 'Home' ? 'Baramati' : currentLocation.label?.split(',')[0]}</span>
           </h1>
 
           <p className="text-xs text-slate-200 leading-relaxed mb-4 line-clamp-2 opacity-95">
-            Autonomous mobile rigs equipped with de-mineralized pure water, pH-neutral high-density snow foam & ceramic gloss protection delivered straight to your bay.
+            Autonomous mobile rigs equipped with de-mineralized pure water, pH-neutral high-density snow foam & ceramic gloss protection delivered straight to your doorstep .
           </p>
 
           <div className="flex flex-wrap items-center gap-2.5">
