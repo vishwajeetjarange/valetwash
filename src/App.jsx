@@ -456,17 +456,7 @@ export default function App() {
         />
 
         {/* Floating Quick Settings / Onboarding Buttons */}
-        <div className="fixed bottom-20 right-4 z-30 flex flex-col gap-2">
-          {/* Dev Quick Settings Floating Pill */}
-          <button
-            onClick={() => { playTapSound(); setIsDevSettingsOpen(true); }}
-            className="p-2.5 rounded-full shadow-xl flex items-center gap-1.5 transition-all text-xs font-bold border border-cyan-400/50 bg-[#0A2240] text-cyan-300"
-            title="Developer Settings: Custom Colors, Logo, About Info, Service Media & Prices"
-          >
-            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-spin-slow"></span>
-            <span className="hidden sm:inline">⚙️ Dev Config</span>
-          </button>
-
+        
           <button
             onClick={() => { playTapSound(); setIsOnboardingOpen(true); }}
             className="p-2.5 rounded-full bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 shadow-md flex items-center gap-1.5 transition-all text-xs font-medium"
