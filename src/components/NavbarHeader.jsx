@@ -115,7 +115,7 @@ export default function NavbarHeader({
                     <span 
                       className="text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider bg-black/40 text-cyan-300 border border-cyan-400/30"
                     >
-                      {brandConfig?.badgeText || 'Aero'}
+                      {brandConfig?.badgeText || '~ VRJ GROUP'}
                     </span>
                   </div>
                   <span className="text-[10px] tracking-tight font-medium text-slate-300 opacity-90 flex items-center gap-1">
