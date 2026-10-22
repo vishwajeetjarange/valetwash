@@ -195,7 +195,7 @@ export default function App() {
   const [isCallModalOpen, setIsCallModalOpen] = useState(false);
   const [isChatModalOpen, setIsChatModalOpen] = useState(false);
   const [isAddVehicleOpen, setIsAddVehicleOpen] = useState(false);
-  const [isDevSettingsOpen, setIsDevSettingsOpen] = useState(false);
+
   const [selectedInvoice, setSelectedInvoice] = useState(null);
 
   const [notifications, setNotifications] = useState(INITIAL_NOTIFICATIONS);
